@@ -1,0 +1,18 @@
+# Rutina 2: piernas segun el nivel
+nivel = 3
+reps = 10
+series = 2
+si nivel > 2 entonces
+    reps = reps + 5
+    series = 4
+sino
+    reps = reps - 2
+fin
+calentar 8
+repetir series veces
+    hacer sentadillas reps
+    hacer zancadas reps - 2
+    descansar 60
+fin
+total = series * reps
+mostrar total
