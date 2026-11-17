@@ -5,11 +5,3 @@ repetir series veces
     hacer flexiones repeticiones
     descansar 30
 fin
-
-# Rutina 5: error sintactico
-series = 4
-calentar 5
-repetir series veces
-    hacer sentadillas 20
-    descansar 40
-trotar 10
