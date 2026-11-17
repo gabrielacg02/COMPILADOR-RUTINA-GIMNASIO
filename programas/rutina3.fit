@@ -1,0 +1,18 @@
+# Rutina 3: circuito de tres rondas
+rondas = 3
+ronda = 0
+calentar 5
+repetir rondas veces
+    ronda = ronda + 1
+    repetir 2 veces
+        hacer burpees 8
+        hacer flexiones 12
+        descansar 20
+    fin
+    si ronda == rondas entonces
+        trotar 5
+    sino
+        descansar 90
+    fin
+fin
+mostrar rondas * 2 * 8
