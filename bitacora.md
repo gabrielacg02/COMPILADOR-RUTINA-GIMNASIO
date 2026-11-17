@@ -7,7 +7,6 @@
 
 En este archivo vamos anotando lo que decidimos como grupo, por qué lo decidimos, quién hizo qué y si usamos IA.
 
----
 
 ## Actividad 3 · Conceptualización básica
 
