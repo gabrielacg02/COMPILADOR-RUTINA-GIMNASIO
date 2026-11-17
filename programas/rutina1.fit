@@ -1,0 +1,9 @@
+# Rutina 1: brazos y abdomen para principiantes
+series = 3
+calentar 5
+repetir series veces
+    hacer flexiones 10
+    hacer abdominales 15
+    descansar 45
+fin
+trotar 10
