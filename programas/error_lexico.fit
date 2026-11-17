@@ -1,0 +1,8 @@
+# Rutina 4: error lexico
+series = 3
+reps = 12;
+calentar 5
+repetir series veces
+    hacer abdominales reps
+    descansar 30
+fin
