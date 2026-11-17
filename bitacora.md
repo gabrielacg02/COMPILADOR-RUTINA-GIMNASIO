@@ -9,7 +9,6 @@ En este archivo vamos anotando lo que decidimos como grupo, por qué lo decidimo
 
 
 ## Actividad 3 · Conceptualización básica
-
 ### Qué decidimos y por qué
 
 - **Nombre del lenguaje: FitLang.** Es corto y se relaciona con el gimnasio. Los programas se guardan con la extensión `.fit`.
