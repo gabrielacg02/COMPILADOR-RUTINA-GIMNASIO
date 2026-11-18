@@ -1,6 +1,5 @@
-# ------------------------------------------------------------
 # Analizador sintáctico de FitLang
-# Hecho por: Yoisi Yarlenis Palacios Moreno
+
 #
 # Revisa, con las reglas de gramatica.txt, que los tokens que
 # entrega el léxico estén en un orden permitido.
