@@ -1,0 +1,16 @@
+# Rutina 9: cuerpo completo que sube de dificultad en cada serie
+series = 3
+base = 8
+serie = 0
+calentar 6
+repetir series veces
+    serie = serie + 1
+    hacer sentadillas base + serie * 2
+    hacer flexiones base
+    si serie < series entonces
+        descansar 60
+    sino
+        trotar 5
+    fin
+fin
+mostrar series * base
