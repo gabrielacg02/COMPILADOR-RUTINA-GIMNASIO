@@ -1,6 +1,4 @@
 GRAMÁTICA DE FITLANG
-Hecha por: Juan Esteban Rada Salcedo
-====================================
 
 Cómo se lee (igual que en la clase):
   →    "se arma con"
