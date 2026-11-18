@@ -1,0 +1,13 @@
+PROGRAMA: error_lexico2.fit
+
+  1 | # Rutina 7: error lexico, simbolo de porcentaje
+  2 | series = 3
+  3 | intensidad = 80%
+  4 | calentar 5
+  5 | repetir series veces
+  6 |     hacer sentadillas 15
+  7 |     descansar 60
+  8 | fin
+
+RESULTADO: error léxico
+Línea 3, columna 16: símbolo '%' no reconocido

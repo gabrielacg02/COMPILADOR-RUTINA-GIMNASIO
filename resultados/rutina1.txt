@@ -1,0 +1,45 @@
+PROGRAMA: rutina1.fit
+
+  1 | # Rutina 1: brazos y abdomen para principiantes
+  2 | series = 3
+  3 | calentar 5
+  4 | repetir series veces
+  5 |     hacer flexiones 10
+  6 |     hacer abdominales 15
+  7 |     descansar 45
+  8 | fin
+  9 | trotar 10
+
+TOKENS (29):
+LÍNEA  COLUMNA  TIPO           TEXTO
+1      48       SALTO          \n
+2      1        IDENTIFICADOR  series
+2      8        ASIGNACION     =
+2      10       NUMERO         3
+2      11       SALTO          \n
+3      1        CALENTAR       calentar
+3      10       NUMERO         5
+3      11       SALTO          \n
+4      1        REPETIR        repetir
+4      9        IDENTIFICADOR  series
+4      16       VECES          veces
+4      21       SALTO          \n
+5      5        HACER          hacer
+5      11       EJERCICIO      flexiones
+5      21       NUMERO         10
+5      23       SALTO          \n
+6      5        HACER          hacer
+6      11       EJERCICIO      abdominales
+6      23       NUMERO         15
+6      25       SALTO          \n
+7      5        DESCANSAR      descansar
+7      15       NUMERO         45
+7      17       SALTO          \n
+8      1        FIN            fin
+8      4        SALTO          \n
+9      1        TROTAR         trotar
+9      8        NUMERO         10
+9      10       SALTO          \n
+9      10       FIN_ARCHIVO    
+
+RESULTADO: correcto, pasa el análisis léxico y el sintáctico

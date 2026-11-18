@@ -1,0 +1,39 @@
+PROGRAMA: error_semantico.fit
+
+  1 | # Rutina 6: error semantico
+  2 | series = 3
+  3 | calentar 5
+  4 | repetir series veces
+  5 |     hacer flexiones repeticiones
+  6 |     descansar 30
+  7 | fin
+
+TOKENS (22):
+LÍNEA  COLUMNA  TIPO           TEXTO
+1      28       SALTO          \n
+2      1        IDENTIFICADOR  series
+2      8        ASIGNACION     =
+2      10       NUMERO         3
+2      11       SALTO          \n
+3      1        CALENTAR       calentar
+3      10       NUMERO         5
+3      11       SALTO          \n
+4      1        REPETIR        repetir
+4      9        IDENTIFICADOR  series
+4      16       VECES          veces
+4      21       SALTO          \n
+5      5        HACER          hacer
+5      11       EJERCICIO      flexiones
+5      21       IDENTIFICADOR  repeticiones
+5      33       SALTO          \n
+6      5        DESCANSAR      descansar
+6      15       NUMERO         30
+6      17       SALTO          \n
+7      1        FIN            fin
+7      4        SALTO          \n
+7      4        FIN_ARCHIVO    
+
+RESULTADO: correcto, pasa el análisis léxico y el sintáctico
+
+NOTA: este programa está bien escrito y bien armado. Su error (usar la
+variable 'repeticiones' que nunca se creó) es semántico: se detecta en la Actividad 7.

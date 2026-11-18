@@ -1,0 +1,31 @@
+RESUMEN DE PRUEBAS - FitLang, Actividad 5 (léxico y sintáctico)
+
+[OK] rutina1.fit
+     esperado: correcto  |  obtenido: correcto
+     correcto
+[OK] rutina2.fit
+     esperado: correcto  |  obtenido: correcto
+     correcto
+[OK] rutina3.fit
+     esperado: correcto  |  obtenido: correcto
+     correcto
+[OK] error_lexico.fit
+     esperado: léxico  |  obtenido: léxico
+     Línea 3, columna 10: símbolo ';' no reconocido
+[OK] error_sintactico.fit
+     esperado: sintáctico  |  obtenido: sintáctico
+     Línea 7, columna 10 (final del archivo): se esperaba 'fin' para cerrar el 'repetir' de la línea 4
+[OK] error_semantico.fit
+     esperado: correcto  |  obtenido: correcto
+     correcto
+[OK] error_lexico2.fit
+     esperado: léxico  |  obtenido: léxico
+     Línea 3, columna 16: símbolo '%' no reconocido
+[OK] error_sintactico2.fit
+     esperado: sintáctico  |  obtenido: sintáctico
+     Línea 4, columna 13: se esperaba 'entonces', pero llegó un salto de línea
+[OK] rutina4.fit
+     esperado: correcto  |  obtenido: correcto
+     correcto
+
+9 de 9 pruebas dieron lo esperado.

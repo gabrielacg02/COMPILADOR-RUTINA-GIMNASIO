@@ -1,0 +1,85 @@
+PROGRAMA: rutina4.fit
+
+  1 | # Rutina 9: cuerpo completo que sube de dificultad en cada serie
+  2 | series = 3
+  3 | base = 8
+  4 | serie = 0
+  5 | calentar 6
+  6 | repetir series veces
+  7 |     serie = serie + 1
+  8 |     hacer sentadillas base + serie * 2
+  9 |     hacer flexiones base
+ 10 |     si serie < series entonces
+ 11 |         descansar 60
+ 12 |     sino
+ 13 |         trotar 5
+ 14 |     fin
+ 15 | fin
+ 16 | mostrar series * base
+
+TOKENS (62):
+LÍNEA  COLUMNA  TIPO           TEXTO
+1      65       SALTO          \n
+2      1        IDENTIFICADOR  series
+2      8        ASIGNACION     =
+2      10       NUMERO         3
+2      11       SALTO          \n
+3      1        IDENTIFICADOR  base
+3      6        ASIGNACION     =
+3      8        NUMERO         8
+3      9        SALTO          \n
+4      1        IDENTIFICADOR  serie
+4      7        ASIGNACION     =
+4      9        NUMERO         0
+4      10       SALTO          \n
+5      1        CALENTAR       calentar
+5      10       NUMERO         6
+5      11       SALTO          \n
+6      1        REPETIR        repetir
+6      9        IDENTIFICADOR  series
+6      16       VECES          veces
+6      21       SALTO          \n
+7      5        IDENTIFICADOR  serie
+7      11       ASIGNACION     =
+7      13       IDENTIFICADOR  serie
+7      19       MAS            +
+7      21       NUMERO         1
+7      22       SALTO          \n
+8      5        HACER          hacer
+8      11       EJERCICIO      sentadillas
+8      23       IDENTIFICADOR  base
+8      28       MAS            +
+8      30       IDENTIFICADOR  serie
+8      36       POR            *
+8      38       NUMERO         2
+8      39       SALTO          \n
+9      5        HACER          hacer
+9      11       EJERCICIO      flexiones
+9      21       IDENTIFICADOR  base
+9      25       SALTO          \n
+10     5        SI             si
+10     8        IDENTIFICADOR  serie
+10     14       MENOR          <
+10     16       IDENTIFICADOR  series
+10     23       ENTONCES       entonces
+10     31       SALTO          \n
+11     9        DESCANSAR      descansar
+11     19       NUMERO         60
+11     21       SALTO          \n
+12     5        SINO           sino
+12     9        SALTO          \n
+13     9        TROTAR         trotar
+13     16       NUMERO         5
+13     17       SALTO          \n
+14     5        FIN            fin
+14     8        SALTO          \n
+15     1        FIN            fin
+15     4        SALTO          \n
+16     1        MOSTRAR        mostrar
+16     9        IDENTIFICADOR  series
+16     16       POR            *
+16     18       IDENTIFICADOR  base
+16     22       SALTO          \n
+16     22       FIN_ARCHIVO    
+
+RESULTADO: correcto, pasa el análisis léxico y el sintáctico

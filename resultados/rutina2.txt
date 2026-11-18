@@ -1,0 +1,96 @@
+PROGRAMA: rutina2.fit
+
+  1 | # Rutina 2: piernas segun el nivel
+  2 | nivel = 3
+  3 | reps = 10
+  4 | series = 2
+  5 | si nivel > 2 entonces
+  6 |     reps = reps + 5
+  7 |     series = 4
+  8 | sino
+  9 |     reps = reps - 2
+ 10 | fin
+ 11 | calentar 8
+ 12 | repetir series veces
+ 13 |     hacer sentadillas reps
+ 14 |     hacer zancadas reps - 2
+ 15 |     descansar 60
+ 16 | fin
+ 17 | total = series * reps
+ 18 | mostrar total
+
+TOKENS (71):
+LÍNEA  COLUMNA  TIPO           TEXTO
+1      35       SALTO          \n
+2      1        IDENTIFICADOR  nivel
+2      7        ASIGNACION     =
+2      9        NUMERO         3
+2      10       SALTO          \n
+3      1        IDENTIFICADOR  reps
+3      6        ASIGNACION     =
+3      8        NUMERO         10
+3      10       SALTO          \n
+4      1        IDENTIFICADOR  series
+4      8        ASIGNACION     =
+4      10       NUMERO         2
+4      11       SALTO          \n
+5      1        SI             si
+5      4        IDENTIFICADOR  nivel
+5      10       MAYOR          >
+5      12       NUMERO         2
+5      14       ENTONCES       entonces
+5      22       SALTO          \n
+6      5        IDENTIFICADOR  reps
+6      10       ASIGNACION     =
+6      12       IDENTIFICADOR  reps
+6      17       MAS            +
+6      19       NUMERO         5
+6      20       SALTO          \n
+7      5        IDENTIFICADOR  series
+7      12       ASIGNACION     =
+7      14       NUMERO         4
+7      15       SALTO          \n
+8      1        SINO           sino
+8      5        SALTO          \n
+9      5        IDENTIFICADOR  reps
+9      10       ASIGNACION     =
+9      12       IDENTIFICADOR  reps
+9      17       MENOS          -
+9      19       NUMERO         2
+9      20       SALTO          \n
+10     1        FIN            fin
+10     4        SALTO          \n
+11     1        CALENTAR       calentar
+11     10       NUMERO         8
+11     11       SALTO          \n
+12     1        REPETIR        repetir
+12     9        IDENTIFICADOR  series
+12     16       VECES          veces
+12     21       SALTO          \n
+13     5        HACER          hacer
+13     11       EJERCICIO      sentadillas
+13     23       IDENTIFICADOR  reps
+13     27       SALTO          \n
+14     5        HACER          hacer
+14     11       EJERCICIO      zancadas
+14     20       IDENTIFICADOR  reps
+14     25       MENOS          -
+14     27       NUMERO         2
+14     28       SALTO          \n
+15     5        DESCANSAR      descansar
+15     15       NUMERO         60
+15     17       SALTO          \n
+16     1        FIN            fin
+16     4        SALTO          \n
+17     1        IDENTIFICADOR  total
+17     7        ASIGNACION     =
+17     9        IDENTIFICADOR  series
+17     16       POR            *
+17     18       IDENTIFICADOR  reps
+17     22       SALTO          \n
+18     1        MOSTRAR        mostrar
+18     9        IDENTIFICADOR  total
+18     14       SALTO          \n
+18     14       FIN_ARCHIVO    
+
+RESULTADO: correcto, pasa el análisis léxico y el sintáctico

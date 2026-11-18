@@ -1,0 +1,38 @@
+PROGRAMA: error_sintactico.fit
+
+  1 | # Rutina 5: error sintactico
+  2 | series = 4
+  3 | calentar 5
+  4 | repetir series veces
+  5 |     hacer sentadillas 20
+  6 |     descansar 40
+  7 | trotar 10
+
+TOKENS (23):
+LÍNEA  COLUMNA  TIPO           TEXTO
+1      29       SALTO          \n
+2      1        IDENTIFICADOR  series
+2      8        ASIGNACION     =
+2      10       NUMERO         4
+2      11       SALTO          \n
+3      1        CALENTAR       calentar
+3      10       NUMERO         5
+3      11       SALTO          \n
+4      1        REPETIR        repetir
+4      9        IDENTIFICADOR  series
+4      16       VECES          veces
+4      21       SALTO          \n
+5      5        HACER          hacer
+5      11       EJERCICIO      sentadillas
+5      23       NUMERO         20
+5      25       SALTO          \n
+6      5        DESCANSAR      descansar
+6      15       NUMERO         40
+6      17       SALTO          \n
+7      1        TROTAR         trotar
+7      8        NUMERO         10
+7      10       SALTO          \n
+7      10       FIN_ARCHIVO    
+
+RESULTADO: error sintáctico
+Línea 7, columna 10 (final del archivo): se esperaba 'fin' para cerrar el 'repetir' de la línea 4

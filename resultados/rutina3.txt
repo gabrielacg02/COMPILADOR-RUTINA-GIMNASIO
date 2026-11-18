@@ -1,0 +1,90 @@
+PROGRAMA: rutina3.fit
+
+  1 | # Rutina 3: circuito de tres rondas
+  2 | rondas = 3
+  3 | ronda = 0
+  4 | calentar 5
+  5 | repetir rondas veces
+  6 |     ronda = ronda + 1
+  7 |     repetir 2 veces
+  8 |         hacer burpees 8
+  9 |         hacer flexiones 12
+ 10 |         descansar 20
+ 11 |     fin
+ 12 |     si ronda == rondas entonces
+ 13 |         trotar 5
+ 14 |     sino
+ 15 |         descansar 90
+ 16 |     fin
+ 17 | fin
+ 18 | mostrar rondas * 2 * 8
+
+TOKENS (65):
+LÍNEA  COLUMNA  TIPO           TEXTO
+1      36       SALTO          \n
+2      1        IDENTIFICADOR  rondas
+2      8        ASIGNACION     =
+2      10       NUMERO         3
+2      11       SALTO          \n
+3      1        IDENTIFICADOR  ronda
+3      7        ASIGNACION     =
+3      9        NUMERO         0
+3      10       SALTO          \n
+4      1        CALENTAR       calentar
+4      10       NUMERO         5
+4      11       SALTO          \n
+5      1        REPETIR        repetir
+5      9        IDENTIFICADOR  rondas
+5      16       VECES          veces
+5      21       SALTO          \n
+6      5        IDENTIFICADOR  ronda
+6      11       ASIGNACION     =
+6      13       IDENTIFICADOR  ronda
+6      19       MAS            +
+6      21       NUMERO         1
+6      22       SALTO          \n
+7      5        REPETIR        repetir
+7      13       NUMERO         2
+7      15       VECES          veces
+7      20       SALTO          \n
+8      9        HACER          hacer
+8      15       EJERCICIO      burpees
+8      23       NUMERO         8
+8      24       SALTO          \n
+9      9        HACER          hacer
+9      15       EJERCICIO      flexiones
+9      25       NUMERO         12
+9      27       SALTO          \n
+10     9        DESCANSAR      descansar
+10     19       NUMERO         20
+10     21       SALTO          \n
+11     5        FIN            fin
+11     8        SALTO          \n
+12     5        SI             si
+12     8        IDENTIFICADOR  ronda
+12     14       IGUAL_IGUAL    ==
+12     17       IDENTIFICADOR  rondas
+12     24       ENTONCES       entonces
+12     32       SALTO          \n
+13     9        TROTAR         trotar
+13     16       NUMERO         5
+13     17       SALTO          \n
+14     5        SINO           sino
+14     9        SALTO          \n
+15     9        DESCANSAR      descansar
+15     19       NUMERO         90
+15     21       SALTO          \n
+16     5        FIN            fin
+16     8        SALTO          \n
+17     1        FIN            fin
+17     4        SALTO          \n
+18     1        MOSTRAR        mostrar
+18     9        IDENTIFICADOR  rondas
+18     16       POR            *
+18     18       NUMERO         2
+18     20       POR            *
+18     22       NUMERO         8
+18     23       SALTO          \n
+18     23       FIN_ARCHIVO    
+
+RESULTADO: correcto, pasa el análisis léxico y el sintáctico
