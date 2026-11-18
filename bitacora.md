@@ -43,3 +43,24 @@ El profesor revisó la Actividad 3 y nos pidió:
 3. Que Yoisi y Juan Esteban hicieran sus propios commits y que fuéramos subiendo a medida que avanzamos. **Hecho:** cada uno subió sus dos programas desde su cuenta, y de aquí en adelante vamos a subir por partes.
 
 
+   ## Actividad 5 · Análisis léxico y sintáctico
+
+### Qué decidimos y por qué
+
+- **Programamos el compilador en Python 3**, sin instalar librerías extra. Es el lenguaje que más manejamos los tres y se puede correr en cualquier computador. Cada uno lo trabajó en Visual Studio Code.
+- **Primero nos pusimos de acuerdo en los nombres de los tokens** (`CALENTAR`, `HACER`, `EJERCICIO`, `IDENTIFICADOR`, `NUMERO`, `ASIGNACION`, `MAS`, `MENOS`, `POR`, `MAYOR`, `MENOR`, `IGUAL_IGUAL`, `SALTO`, `FIN_ARCHIVO`...), porque el léxico los produce, el sintáctico los recibe y la gramática los nombra. Si cada uno les ponía un nombre distinto, las partes no iban a encajar.
+- **Trabajamos en orden:** primero el léxico, porque el sintáctico lo necesita para funcionar; la gramática se hizo al mismo tiempo, porque no depende del código; y las pruebas al final, cuando ya estaban las dos fases.
+- **El léxico lee el programa carácter por carácter** y lleva la cuenta de la línea y la columna. Las dos empiezan en 1 y las columnas cuentan los espacios, como decidimos en la Actividad 3.
+- **El salto de línea es un token (`SALTO`)**, porque en FitLang va una instrucción por línea y el sintáctico necesita saber dónde termina cada una. Los espacios y la sangría no son tokens.
+- **Los ejercicios se reconocen en el léxico** (token `EJERCICIO`). Así el sintáctico puede avisar "se esperaba un ejercicio" si alguien escribe `hacer pesas 10`.
+- **Una mayúscula, una tilde o un símbolo como `;`, `%` o `@` es error léxico.** El léxico se detiene en el primer error, porque sin la lista completa de tokens no se puede seguir.
+- **La gramática no tiene recursividad izquierda.** Las cuentas se escriben con la forma "locomotora y vagones" de la clase (`Expr → Termino RestoExpr`), porque `Expr → Expr + Termino` haría que el analizador descendente se quedara dando vueltas sin leer nada.
+- **La multiplicación va más abajo en la gramática que la suma y la resta**, para que se haga primero: `2 + 3 * 4` da 14.
+- **El sintáctico es descendente recursivo:** una función por cada regla de la gramática, como lo vimos en clase. Encima de cada función está la regla que revisa (R1, R2...), y cada `RestoExpr` y `RestoTermino` se programó con un `while`.
+- **Los errores dicen qué pasó, la línea y la columna**, por ejemplo «Línea 4, columna 13: se esperaba 'entonces', pero llegó un salto de línea». El sintáctico también se detiene en el primer error. Cuando falta un `fin`, el error se marca justo después de la última instrucción del archivo y dice en qué línea se abrió el bloque, así coincide con lo que explicamos en la Actividad 3 (línea 7, columna 10).
+- **`descansar -30` es error de sintaxis**, porque FitLang no tiene números negativos escritos directamente. Que una cuenta dé negativo (como `series - 5`) lo va a revisar el semántico en la Actividad 7.
+- **Los tres programas nuevos:** `error_lexico2.fit` (un `%` en la línea 3, columna 16), `error_sintactico2.fit` (un `si` sin `entonces` en la línea 4) y `rutina4.fit` (correcto, con un `si` dentro de un `repetir` y una cuenta para probar la precedencia).
+- **Pruebas:** `pruebas.py` pasa los 9 programas por el compilador, compara lo que salió con lo que esperábamos y guarda un archivo por programa en la carpeta `resultados/`, más un `resumen.txt`. Las 9 pruebas dieron lo esperado. `error_semantico.fit` pasa estas dos fases, y así debe ser: está bien escrito y bien armado, y su error (usar una variable que no existe) se detecta en la Actividad 7.
+- **Formato de los archivos:** Gabriela quitó los comentarios de "Hecho por" de los archivos para dejarlos todos con el mismo formato. La autoría de cada parte queda en los commits de cada uno.
+
+
