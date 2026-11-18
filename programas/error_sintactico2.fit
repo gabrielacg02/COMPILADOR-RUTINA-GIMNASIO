@@ -1,0 +1,8 @@
+# Rutina 8: error sintactico, si sin entonces
+nivel = 1
+calentar 5
+si nivel > 2
+    hacer burpees 10
+sino
+    hacer sentadillas 12
+fin
