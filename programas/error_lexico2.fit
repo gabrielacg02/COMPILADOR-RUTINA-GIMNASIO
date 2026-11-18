@@ -1,0 +1,8 @@
+# Rutina 7: error lexico, simbolo de porcentaje
+series = 3
+intensidad = 80%
+calentar 5
+repetir series veces
+    hacer sentadillas 15
+    descansar 60
+fin
