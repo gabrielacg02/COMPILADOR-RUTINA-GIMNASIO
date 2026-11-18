@@ -1,0 +1,97 @@
+GRAMÁTICA DE FITLANG
+Hecha por: Juan Esteban Rada Salcedo
+====================================
+
+Cómo se lee (igual que en la clase):
+  →    "se arma con"
+  |    "o"
+  ε    "nada" (la regla se puede quedar vacía)
+  Las palabras que empiezan con Mayúscula son no terminales (cajas que se siguen abriendo).
+  Lo que va entre comillas o todo en MAYÚSCULAS son terminales (los tokens del léxico).
+
+Símbolo inicial: Programa
+
+
+TOKENS QUE ENTREGA EL ANALIZADOR LÉXICO
+---------------------------------------
+  IDENTIFICADOR   nombre de una variable: series, reps, nivel
+  NUMERO          número entero: 3, 10, 45
+  EJERCICIO       flexiones | sentadillas | abdominales | burpees | zancadas
+  SALTO           salto de línea
+  FIN_ARCHIVO     final del archivo
+  palabras        'calentar' 'hacer' 'descansar' 'trotar' 'mostrar'
+                  'repetir' 'veces' 'si' 'entonces' 'sino' 'fin'
+  símbolos        '='  '+'  '-'  '*'  '>'  '<'  '=='
+
+
+REGLAS
+------
+R1   Programa      → Lista FIN_ARCHIVO
+
+R2   Lista         → SALTO Lista
+                   | Instruccion FinLinea Lista
+                   | ε
+
+R3   FinLinea      → SALTO
+                   | ε                         (solo si ya viene FIN_ARCHIVO)
+
+R4   Instruccion   → Asignacion
+                   | Calentar
+                   | Hacer
+                   | Descansar
+                   | Trotar
+                   | Mostrar
+                   | Repetir
+                   | Si
+
+R5   Asignacion    → IDENTIFICADOR '=' Expr
+R6   Calentar      → 'calentar' Expr
+R7   Hacer         → 'hacer' EJERCICIO Expr
+R8   Descansar     → 'descansar' Expr
+R9   Trotar        → 'trotar' Expr
+R10  Mostrar       → 'mostrar' Expr
+
+R11  Repetir       → 'repetir' Expr 'veces' SALTO Lista 'fin'
+
+R12  Si            → 'si' Comparacion 'entonces' SALTO Lista Sino 'fin'
+R13  Sino          → 'sino' SALTO Lista
+                   | ε
+
+R14  Comparacion   → Expr OpComparacion Expr
+R15  OpComparacion → '>' | '<' | '=='
+
+R16  Expr          → Termino RestoExpr
+R17  RestoExpr     → '+' Termino RestoExpr
+                   | '-' Termino RestoExpr
+                   | ε
+
+R18  Termino       → Valor RestoTermino
+R19  RestoTermino  → '*' Valor RestoTermino
+                   | ε
+
+R20  Valor         → NUMERO
+                   | IDENTIFICADOR
+
+
+POR QUÉ LA ESCRIBIMOS ASÍ
+-------------------------
+1. Sin recursividad izquierda. Una suma se podría escribir  Expr → Expr '+' Termino,
+   pero esa regla empieza llamándose a sí misma y el analizador descendente se
+   quedaría dando vueltas sin leer nada. Por eso usamos el truco del tren de la
+   clase: primero la locomotora (Termino) y después los vagones (RestoExpr), que
+   pueden ser muchos o ninguno (ε).
+
+2. Precedencia. La multiplicación está en Termino, más abajo que la suma y la resta
+   (Expr). Lo que está más abajo se agrupa primero:  2 + 3 * 4  da 14.
+
+3. Asociatividad. Las operaciones del mismo nivel se agrupan de izquierda a derecha:
+   10 - 4 - 3  es  (10 - 4) - 3  y da 3.
+
+4. Dentro de un 'repetir' o de un 'si', la Lista termina cuando llega 'fin' o 'sino'.
+   Si en vez de eso se acaba el archivo, falta el 'fin' y es un error de sintaxis.
+
+5. Las comparaciones (>, <, ==) solo aparecen en la regla Si: no se pueden guardar
+   en una variable.
+
+6. La sangría (los espacios al inicio) no está en la gramática: el léxico se la salta.
+   La usamos solo para que se vea qué instrucciones van dentro de cada bloque.
