@@ -1,0 +1,7 @@
+# Rutina 12: rompe la regla R3, descanso de 10 minutos
+calentar 5
+repetir 2 veces
+    hacer burpees 10
+    descansar 600
+fin
+trotar 5
