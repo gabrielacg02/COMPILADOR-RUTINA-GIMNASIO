@@ -1,0 +1,8 @@
+# Rutina 11: rompe la regla R2, hacer con 0 repeticiones
+reps = 12
+calentar 5
+repetir 3 veces
+    hacer sentadillas reps
+    hacer abdominales reps - 12
+    descansar 45
+fin
