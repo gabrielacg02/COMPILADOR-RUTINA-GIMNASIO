@@ -1,0 +1,12 @@
+# Rutina 14: flexiones y abdomen con un descanso que baja en cada serie
+series = 3
+descanso = 90
+calentar 7
+repetir series veces
+    hacer flexiones 12
+    hacer abdominales 20
+    descansar descanso
+    descanso = descanso - 30
+fin
+trotar 10
+mostrar series * 20
