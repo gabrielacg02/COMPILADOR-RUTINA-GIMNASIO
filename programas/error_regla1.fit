@@ -1,0 +1,7 @@
+# Rutina 10: rompe la regla R1, repetir con un numero negativo
+series = 3
+calentar 5
+repetir series - 5 veces
+    hacer flexiones 10
+    descansar 30
+fin
