@@ -82,6 +82,7 @@ El profesor revisó la Actividad 3 y nos pidió:
 - **`fitlang.py` y `pruebas.py` se actualizaron** para pasar por las cuatro fases. Los hizo Juan Esteban en la Actividad 5 y en esta actividad los actualizó Gabriela, que estaba a cargo de unir todo.
 - **Los resultados de esta actividad van en una carpeta nueva, `resultados_actividad7/`,** para no borrar los de la Actividad 5, que siguen en `resultados/`.
 - **Media página:** está en `media pagina.md`. Cuenta lo más difícil de cada parte y las decisiones que tomamos.
+- - **Capturas de las pruebas:** la carpeta `Capturas pruebas/` tiene los documentos de la Actividad 5 y de la Actividad 7 con las capturas de las pruebas que hizo cada uno en su computador, explicando qué salió en cada una.
 - **Cinco programas nuevos:** `error_variable2.fit` (Yoisi), `error_regla1.fit`, `error_regla2.fit` y `error_regla3.fit` (Gabriela) y `rutina5.fit` (Juan Esteban). En total son 14 programas y las 14 pruebas dieron lo esperado. `error_semantico.fit`, que en la Actividad 5 pasaba, ahora sí marca su error.
 
 
