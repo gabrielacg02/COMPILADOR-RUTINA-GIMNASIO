@@ -1,0 +1,25 @@
+PROGRAMA: error_variable2.fit
+
+  1 | # Rutina 13: error semantico, la condicion usa una variable que no existe
+  2 | nivel = 2
+  3 | calentar 5
+  4 | si experiencia > 1 entonces
+  5 |     hacer zancadas 12
+  6 | sino
+  7 |     hacer zancadas 8
+  8 | fin
+  9 | descansar 60
+
+RESULTADO: error semántico
+Línea 4, columna 4: la variable 'experiencia' se usa pero nunca se creó
+
+ÁRBOL SINTÁCTICO:
+programa
+  asignacion: nivel = 2
+  calentar: 5
+  si: experiencia > 1
+    entonces:
+      hacer: zancadas, 12
+    sino:
+      hacer: zancadas, 8
+  descansar: 60

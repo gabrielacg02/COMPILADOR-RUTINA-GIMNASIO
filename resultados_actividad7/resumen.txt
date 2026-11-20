@@ -1,0 +1,46 @@
+RESUMEN DE PRUEBAS - FitLang, Actividad 7 (compilador completo)
+
+[OK] rutina1.fit
+     esperado: correcto  |  obtenido: correcto
+     correcto: 11 comandos generados
+[OK] rutina2.fit
+     esperado: correcto  |  obtenido: correcto
+     correcto: 14 comandos generados
+[OK] rutina3.fit
+     esperado: correcto  |  obtenido: correcto
+     correcto: 23 comandos generados
+[OK] error_lexico.fit
+     esperado: léxico  |  obtenido: léxico
+     Línea 3, columna 10: símbolo ';' no reconocido
+[OK] error_sintactico.fit
+     esperado: sintáctico  |  obtenido: sintáctico
+     Línea 7, columna 10 (final del archivo): se esperaba 'fin' para cerrar el 'repetir' de la línea 4
+[OK] error_semantico.fit
+     esperado: semántico  |  obtenido: semántico
+     Línea 5, columna 21: la variable 'repeticiones' se usa pero nunca se creó
+[OK] error_lexico2.fit
+     esperado: léxico  |  obtenido: léxico
+     Línea 3, columna 16: símbolo '%' no reconocido
+[OK] error_sintactico2.fit
+     esperado: sintáctico  |  obtenido: sintáctico
+     Línea 4, columna 13: se esperaba 'entonces', pero llegó un salto de línea
+[OK] rutina4.fit
+     esperado: correcto  |  obtenido: correcto
+     correcto: 11 comandos generados
+[OK] error_variable2.fit
+     esperado: semántico  |  obtenido: semántico
+     Línea 4, columna 4: la variable 'experiencia' se usa pero nunca se creó
+[OK] error_regla1.fit
+     esperado: semántico  |  obtenido: semántico
+     Línea 4: se rompió la regla R1 (repetir debe ser mayor que 0): aquí se pide repetir -2 veces
+[OK] error_regla2.fit
+     esperado: semántico  |  obtenido: semántico
+     Línea 6: se rompió la regla R2 (las repeticiones de hacer deben ser mayores que 0): aquí se piden 0 abdominales
+[OK] error_regla3.fit
+     esperado: semántico  |  obtenido: semántico
+     Línea 5: se rompió la regla R3 (descansar debe estar entre 10 y 300 segundos): aquí se piden 600 segundos
+[OK] rutina5.fit
+     esperado: correcto  |  obtenido: correcto
+     correcto: 12 comandos generados
+
+14 de 14 pruebas dieron lo esperado.

@@ -1,0 +1,22 @@
+PROGRAMA: error_regla2.fit
+
+  1 | # Rutina 11: rompe la regla R2, hacer con 0 repeticiones
+  2 | reps = 12
+  3 | calentar 5
+  4 | repetir 3 veces
+  5 |     hacer sentadillas reps
+  6 |     hacer abdominales reps - 12
+  7 |     descansar 45
+  8 | fin
+
+RESULTADO: error semántico
+Línea 6: se rompió la regla R2 (las repeticiones de hacer deben ser mayores que 0): aquí se piden 0 abdominales
+
+ÁRBOL SINTÁCTICO:
+programa
+  asignacion: reps = 12
+  calentar: 5
+  repetir: 3 veces
+      hacer: sentadillas, reps
+      hacer: abdominales, (reps - 12)
+      descansar: 45

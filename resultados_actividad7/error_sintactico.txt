@@ -1,0 +1,12 @@
+PROGRAMA: error_sintactico.fit
+
+  1 | # Rutina 5: error sintactico
+  2 | series = 4
+  3 | calentar 5
+  4 | repetir series veces
+  5 |     hacer sentadillas 20
+  6 |     descansar 40
+  7 | trotar 10
+
+RESULTADO: error sintáctico
+Línea 7, columna 10 (final del archivo): se esperaba 'fin' para cerrar el 'repetir' de la línea 4

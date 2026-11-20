@@ -1,0 +1,20 @@
+PROGRAMA: error_regla1.fit
+
+  1 | # Rutina 10: rompe la regla R1, repetir con un numero negativo
+  2 | series = 3
+  3 | calentar 5
+  4 | repetir series - 5 veces
+  5 |     hacer flexiones 10
+  6 |     descansar 30
+  7 | fin
+
+RESULTADO: error semántico
+Línea 4: se rompió la regla R1 (repetir debe ser mayor que 0): aquí se pide repetir -2 veces
+
+ÁRBOL SINTÁCTICO:
+programa
+  asignacion: series = 3
+  calentar: 5
+  repetir: (series - 5) veces
+      hacer: flexiones, 10
+      descansar: 30

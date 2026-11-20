@@ -1,0 +1,64 @@
+PROGRAMA: rutina2.fit
+
+  1 | # Rutina 2: piernas segun el nivel
+  2 | nivel = 3
+  3 | reps = 10
+  4 | series = 2
+  5 | si nivel > 2 entonces
+  6 |     reps = reps + 5
+  7 |     series = 4
+  8 | sino
+  9 |     reps = reps - 2
+ 10 | fin
+ 11 | calentar 8
+ 12 | repetir series veces
+ 13 |     hacer sentadillas reps
+ 14 |     hacer zancadas reps - 2
+ 15 |     descansar 60
+ 16 | fin
+ 17 | total = series * reps
+ 18 | mostrar total
+
+RESULTADO: correcto, pasa las cuatro fases
+
+VARIABLES (tabla de símbolos):
+VARIABLE    VALOR FINAL   DEFINIDA EN LA LÍNEA
+nivel       3             2
+reps        15            3
+series      4             4
+total       60            17
+
+COMANDOS GENERADOS (14), guardados en comandos/rutina2.txt:
+  CALENTAR 8
+  HACER SENTADILLAS 15
+  HACER ZANCADAS 13
+  DESCANSAR 60
+  HACER SENTADILLAS 15
+  HACER ZANCADAS 13
+  DESCANSAR 60
+  HACER SENTADILLAS 15
+  HACER ZANCADAS 13
+  DESCANSAR 60
+  HACER SENTADILLAS 15
+  HACER ZANCADAS 13
+  DESCANSAR 60
+  MOSTRAR 60
+
+ÁRBOL SINTÁCTICO:
+programa
+  asignacion: nivel = 3
+  asignacion: reps = 10
+  asignacion: series = 2
+  si: nivel > 2
+    entonces:
+      asignacion: reps = (reps + 5)
+      asignacion: series = 4
+    sino:
+      asignacion: reps = (reps - 2)
+  calentar: 8
+  repetir: series veces
+      hacer: sentadillas, reps
+      hacer: zancadas, (reps - 2)
+      descansar: 60
+  asignacion: total = (series * reps)
+  mostrar: total

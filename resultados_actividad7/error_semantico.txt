@@ -1,0 +1,20 @@
+PROGRAMA: error_semantico.fit
+
+  1 | # Rutina 6: error semantico
+  2 | series = 3
+  3 | calentar 5
+  4 | repetir series veces
+  5 |     hacer flexiones repeticiones
+  6 |     descansar 30
+  7 | fin
+
+RESULTADO: error semántico
+Línea 5, columna 21: la variable 'repeticiones' se usa pero nunca se creó
+
+ÁRBOL SINTÁCTICO:
+programa
+  asignacion: series = 3
+  calentar: 5
+  repetir: series veces
+      hacer: flexiones, repeticiones
+      descansar: 30

@@ -1,0 +1,56 @@
+PROGRAMA: rutina4.fit
+
+  1 | # Rutina 9: cuerpo completo que sube de dificultad en cada serie
+  2 | series = 3
+  3 | base = 8
+  4 | serie = 0
+  5 | calentar 6
+  6 | repetir series veces
+  7 |     serie = serie + 1
+  8 |     hacer sentadillas base + serie * 2
+  9 |     hacer flexiones base
+ 10 |     si serie < series entonces
+ 11 |         descansar 60
+ 12 |     sino
+ 13 |         trotar 5
+ 14 |     fin
+ 15 | fin
+ 16 | mostrar series * base
+
+RESULTADO: correcto, pasa las cuatro fases
+
+VARIABLES (tabla de símbolos):
+VARIABLE    VALOR FINAL   DEFINIDA EN LA LÍNEA
+series      3             2
+base        8             3
+serie       3             4
+
+COMANDOS GENERADOS (11), guardados en comandos/rutina4.txt:
+  CALENTAR 6
+  HACER SENTADILLAS 10
+  HACER FLEXIONES 8
+  DESCANSAR 60
+  HACER SENTADILLAS 12
+  HACER FLEXIONES 8
+  DESCANSAR 60
+  HACER SENTADILLAS 14
+  HACER FLEXIONES 8
+  TROTAR 5
+  MOSTRAR 24
+
+ÁRBOL SINTÁCTICO:
+programa
+  asignacion: series = 3
+  asignacion: base = 8
+  asignacion: serie = 0
+  calentar: 6
+  repetir: series veces
+      asignacion: serie = (serie + 1)
+      hacer: sentadillas, (base + (serie * 2))
+      hacer: flexiones, base
+      si: serie < series
+        entonces:
+          descansar: 60
+        sino:
+          trotar: 5
+  mostrar: (series * base)

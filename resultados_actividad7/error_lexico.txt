@@ -1,0 +1,13 @@
+PROGRAMA: error_lexico.fit
+
+  1 | # Rutina 4: error lexico
+  2 | series = 3
+  3 | reps = 12;
+  4 | calentar 5
+  5 | repetir series veces
+  6 |     hacer abdominales reps
+  7 |     descansar 30
+  8 | fin
+
+RESULTADO: error léxico
+Línea 3, columna 10: símbolo ';' no reconocido

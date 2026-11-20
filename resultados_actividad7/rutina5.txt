@@ -1,0 +1,48 @@
+PROGRAMA: rutina5.fit
+
+  1 | # Rutina 14: flexiones y abdomen con un descanso que baja en cada serie
+  2 | series = 3
+  3 | descanso = 90
+  4 | calentar 7
+  5 | repetir series veces
+  6 |     hacer flexiones 12
+  7 |     hacer abdominales 20
+  8 |     descansar descanso
+  9 |     descanso = descanso - 30
+ 10 | fin
+ 11 | trotar 10
+ 12 | mostrar series * 20
+
+RESULTADO: correcto, pasa las cuatro fases
+
+VARIABLES (tabla de símbolos):
+VARIABLE    VALOR FINAL   DEFINIDA EN LA LÍNEA
+series      3             2
+descanso    0             3
+
+COMANDOS GENERADOS (12), guardados en comandos/rutina5.txt:
+  CALENTAR 7
+  HACER FLEXIONES 12
+  HACER ABDOMINALES 20
+  DESCANSAR 90
+  HACER FLEXIONES 12
+  HACER ABDOMINALES 20
+  DESCANSAR 60
+  HACER FLEXIONES 12
+  HACER ABDOMINALES 20
+  DESCANSAR 30
+  TROTAR 10
+  MOSTRAR 60
+
+ÁRBOL SINTÁCTICO:
+programa
+  asignacion: series = 3
+  asignacion: descanso = 90
+  calentar: 7
+  repetir: series veces
+      hacer: flexiones, 12
+      hacer: abdominales, 20
+      descansar: descanso
+      asignacion: descanso = (descanso - 30)
+  trotar: 10
+  mostrar: (series * 20)

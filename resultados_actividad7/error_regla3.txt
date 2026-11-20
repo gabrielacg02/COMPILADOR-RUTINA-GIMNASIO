@@ -1,0 +1,20 @@
+PROGRAMA: error_regla3.fit
+
+  1 | # Rutina 12: rompe la regla R3, descanso de 10 minutos
+  2 | calentar 5
+  3 | repetir 2 veces
+  4 |     hacer burpees 10
+  5 |     descansar 600
+  6 | fin
+  7 | trotar 5
+
+RESULTADO: error semántico
+Línea 5: se rompió la regla R3 (descansar debe estar entre 10 y 300 segundos): aquí se piden 600 segundos
+
+ÁRBOL SINTÁCTICO:
+programa
+  calentar: 5
+  repetir: 2 veces
+      hacer: burpees, 10
+      descansar: 600
+  trotar: 5

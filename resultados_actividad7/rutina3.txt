@@ -1,0 +1,70 @@
+PROGRAMA: rutina3.fit
+
+  1 | # Rutina 3: circuito de tres rondas
+  2 | rondas = 3
+  3 | ronda = 0
+  4 | calentar 5
+  5 | repetir rondas veces
+  6 |     ronda = ronda + 1
+  7 |     repetir 2 veces
+  8 |         hacer burpees 8
+  9 |         hacer flexiones 12
+ 10 |         descansar 20
+ 11 |     fin
+ 12 |     si ronda == rondas entonces
+ 13 |         trotar 5
+ 14 |     sino
+ 15 |         descansar 90
+ 16 |     fin
+ 17 | fin
+ 18 | mostrar rondas * 2 * 8
+
+RESULTADO: correcto, pasa las cuatro fases
+
+VARIABLES (tabla de símbolos):
+VARIABLE    VALOR FINAL   DEFINIDA EN LA LÍNEA
+rondas      3             2
+ronda       3             3
+
+COMANDOS GENERADOS (23), guardados en comandos/rutina3.txt:
+  CALENTAR 5
+  HACER BURPEES 8
+  HACER FLEXIONES 12
+  DESCANSAR 20
+  HACER BURPEES 8
+  HACER FLEXIONES 12
+  DESCANSAR 20
+  DESCANSAR 90
+  HACER BURPEES 8
+  HACER FLEXIONES 12
+  DESCANSAR 20
+  HACER BURPEES 8
+  HACER FLEXIONES 12
+  DESCANSAR 20
+  DESCANSAR 90
+  HACER BURPEES 8
+  HACER FLEXIONES 12
+  DESCANSAR 20
+  HACER BURPEES 8
+  HACER FLEXIONES 12
+  DESCANSAR 20
+  TROTAR 5
+  MOSTRAR 48
+
+ÁRBOL SINTÁCTICO:
+programa
+  asignacion: rondas = 3
+  asignacion: ronda = 0
+  calentar: 5
+  repetir: rondas veces
+      asignacion: ronda = (ronda + 1)
+      repetir: 2 veces
+          hacer: burpees, 8
+          hacer: flexiones, 12
+          descansar: 20
+      si: ronda == rondas
+        entonces:
+          trotar: 5
+        sino:
+          descansar: 90
+  mostrar: ((rondas * 2) * 8)

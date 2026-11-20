@@ -1,0 +1,40 @@
+PROGRAMA: rutina1.fit
+
+  1 | # Rutina 1: brazos y abdomen para principiantes
+  2 | series = 3
+  3 | calentar 5
+  4 | repetir series veces
+  5 |     hacer flexiones 10
+  6 |     hacer abdominales 15
+  7 |     descansar 45
+  8 | fin
+  9 | trotar 10
+
+RESULTADO: correcto, pasa las cuatro fases
+
+VARIABLES (tabla de símbolos):
+VARIABLE    VALOR FINAL   DEFINIDA EN LA LÍNEA
+series      3             2
+
+COMANDOS GENERADOS (11), guardados en comandos/rutina1.txt:
+  CALENTAR 5
+  HACER FLEXIONES 10
+  HACER ABDOMINALES 15
+  DESCANSAR 45
+  HACER FLEXIONES 10
+  HACER ABDOMINALES 15
+  DESCANSAR 45
+  HACER FLEXIONES 10
+  HACER ABDOMINALES 15
+  DESCANSAR 45
+  TROTAR 10
+
+ÁRBOL SINTÁCTICO:
+programa
+  asignacion: series = 3
+  calentar: 5
+  repetir: series veces
+      hacer: flexiones, 10
+      hacer: abdominales, 15
+      descansar: 45
+  trotar: 10
